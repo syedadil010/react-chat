@@ -6,4 +6,4 @@ Built using React.js, React Hooks, CSS, Firebase, Firebase Authentication and Fi
 ## To Run
 Download the folder and run the following in the command line of the folder:  
 1) npm install  
-2) npm start  
+2) npm start 
