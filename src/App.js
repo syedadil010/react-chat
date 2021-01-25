@@ -9,31 +9,11 @@ import 'firebase/analytics';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
-// import React from 'react';
-// import './App.css';
-
-// //firebase sdk
-// import firebase from 'firebase/app'
-// //firebase db
-// import 'firebase/firestore'
-// //firebase user authentication
-// import 'firebase/auth'
-
-// //Firebase hooks
-// import {useAuthState} from 'react-firebase-hooks/auth';
-// import { useCollectionData } from 'react-firebase-hooks/firestore';
-//import {useCollectionData} from 'react-firebase-hooks/firestore';
 
 //we call fb intialize app to identify our project
 if (!firebase.apps.length) {
 firebase.initializeApp({
-  apiKey: "AIzaSyD6Ei9gnYaZ7f6cndoNWCnYZ2ERyQ1lIoc",
-    authDomain: "chatapp-e5ba9.firebaseapp.com",
-    projectId: "chatapp-e5ba9",
-    storageBucket: "chatapp-e5ba9.appspot.com",
-    messagingSenderId: "617069936760",
-    appId: "1:617069936760:web:5336e5f22bfd949165ad8d",
-    measurementId: "G-PBK7J33DSF"
+  // Put your firebase credentials
 })
 }else {
   firebase.app(); // if already initialized, use that one
@@ -45,7 +25,6 @@ const firestore=firebase.firestore();
 function App() {
 
   const [user]=useAuthState(auth);
-  //console.log(user);
 
   return (
     <div className="App">
@@ -88,7 +67,7 @@ const sendMessage= async(e) =>{
   setFormValue('');
   dummy.current.scrollIntoView({behavior:'smooth'});
 }
-//const [messages] = useCollectionData(query, {idField: 'id'});
+
 //Every message is represented as a doc in firestore
 //messages is a array of objects where each object is a chat message in db 
   return(
